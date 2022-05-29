@@ -3,6 +3,9 @@ import './Results.css';
 import Card from './Card.js';
 
 const all_courses = require('./courses.json');
+const result = require('./result.json');
+const scrapedCourses = result.ctecs;
+
 const { search } = window.location;
 const query = new URLSearchParams(search).get('s');
 const filterCourses = (courses, query) => {
@@ -22,7 +25,7 @@ class Results extends Component {
         super(props)
             
         // Set initial state
-        this.state = {course: '', description: ''}
+        this.state = {course: all_courses.courses.find(element => element.id === "COMP_SCI 111-0")}
             
         // Binding this keyword
         this.handleClick = this.handleClick.bind(this)
@@ -52,10 +55,8 @@ class Results extends Component {
                 <div className='reviews'>
                     <h3>Student Reviews:</h3>
                     <ul>
-                        <li>It was good. It started slow so I thought I didn't need to pay attention at first but everything builds on the previous class so its important to really follow along and then things won't get too confusing.</li>
-                        <br/><li>I really liked it, it was super fun. I liked that we didn't just do math programs but we worked with visualizations and things that we use daily to make the coding more fun and more relatable to real life.</li>
-                        <br/><li>Learned what I wanted to, could've done a bit more with data analysis though</li>
-                        <br/><li>Work is time consuming, and for me, it was difficult. Sara is a great professor and will help you if you ask for it though. Pay attention and follow lecture, it will save you.</li>
+                        {console.log(this.state.course.name)}
+                        {console.log(scrapedCourses.find(element => element.course_name === this.state.course.name))}
                     </ul>
                 </div>
             </div>
