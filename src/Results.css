@@ -1,0 +1,29 @@
+.searchResults {
+    height: 100%;
+    width: 20%;
+    padding-right: 50px;
+    width: fit-content;
+    overflow-y: scroll;
+}
+
+ul {
+    margin: 0;
+    list-style: none;
+    line-height: 30px;
+    cursor: pointer;
+}
+
+.results {
+    display: flex;
+    height: 80vh;
+  }
+  
+.results > * {
+    padding: 10px;
+}
+
+.courseInfo {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+}
