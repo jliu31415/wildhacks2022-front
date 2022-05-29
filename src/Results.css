@@ -1,9 +1,9 @@
 .searchResults {
     height: 100%;
-    width: 20%;
-    padding-right: 50px;
     width: fit-content;
     overflow-y: scroll;
+    border-left: 3px solid indigo;
+    border-right: 3px solid indigo;
 }
 
 ul {
@@ -26,4 +26,14 @@ ul {
     width: 80%;
     display: flex;
     justify-content: center;
+}
+
+.reviews {
+    width: 45%;
+    height: 100%;
+    overflow-y: scroll;
+}
+
+.reviews h3 {
+    text-align: center;
 }

@@ -1,0 +1,20 @@
+.userInput {
+    background-color: white;
+    height: 100px;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.userInput textarea {
+    padding: 10px;
+    height: 100px;
+    width: 350px;
+}
+
+.userInput > input {
+    width: 80px;
+    height: 30px;
+    margin-top: 10px;
+}
